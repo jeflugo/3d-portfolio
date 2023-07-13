@@ -1,4 +1,4 @@
-import logo from '/logo-black.png'
+import logo from '/logo.png'
 import backend from './backend.png'
 import creator from './creator.png'
 import mobile from './mobile.png'
@@ -19,6 +19,7 @@ import nodejs from './tech/nodejs.png'
 import reactjs from './tech/reactjs.png'
 import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
+import bootstrap from './tech/bootstrap.png'
 import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
 
@@ -30,6 +31,12 @@ import tesla from './company/tesla.png'
 import carrent from './carrent.png'
 import jobit from './jobit.png'
 import tripguide from './tripguide.png'
+import weightTracker from './weight-tracker.png'
+import todoList from './todo-list.png'
+import vowelCounter from './vowel-counter.png'
+import fakePortfolio from './fake-portfolio.png'
+import calculator from './calculator.png'
+import snakeGame from './snake-game.png'
 
 export {
 	logo,
@@ -52,6 +59,7 @@ export {
 	reactjs,
 	redux,
 	tailwind,
+	bootstrap,
 	typescript,
 	threejs,
 	meta,
@@ -61,4 +69,10 @@ export {
 	carrent,
 	jobit,
 	tripguide,
+	weightTracker,
+	todoList,
+	vowelCounter,
+	fakePortfolio,
+	calculator,
+	snakeGame,
 }

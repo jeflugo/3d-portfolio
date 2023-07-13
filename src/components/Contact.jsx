@@ -111,12 +111,13 @@ function Contact() {
 							onChange={handleChange}
 							placeholder='What do you want to say?'
 							className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+							style={{ resize: 'none' }}
 						/>
 					</label>
 
 					<button
 						type='submit'
-						className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadoww-primary rounded-xl'
+						className='bg-violet-800 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadoww-primary rounded-xl'
 					>
 						{loading ? 'Sending...' : 'Send'}
 					</button>

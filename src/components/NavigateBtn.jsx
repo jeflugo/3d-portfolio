@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-export default function NavigateBtn() {
+export default function NavigateBtn({ setActive }) {
 	const [y, setY] = useState(0)
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ export default function NavigateBtn() {
 				}}
 			>
 				{y !== 0 ? (
-					<a href='#hero'>
+					<a href='#hero' onClick={e => setActive('')}>
 						<div
 							className='w-[60px] h-[60px] rounded-full border-4 border-secondary flex justify-center items-center text-[30px] font-bold'
 							title='Navigate Up'

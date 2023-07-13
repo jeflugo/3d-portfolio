@@ -13,6 +13,7 @@ function ProjectCard({
 	description,
 	tags,
 	image,
+	page_link,
 	source_code_link,
 }) {
 	return (
@@ -34,7 +35,7 @@ function ProjectCard({
 
 					<div className='absolute inset-0 flex justify-end m-3 card-img_hover gap-3'>
 						<div
-							onClick={() => window.open(source_code_link, '_blank')}
+							onClick={() => window.open(page_link, '_blank')}
 							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
 						>
 							<img
@@ -66,7 +67,11 @@ function ProjectCard({
 
 				<div className='mt-4 flex flex-wrap gap-2'>
 					{tags.map(tag => (
-						<p key={tag.name} className={`text-[14px] ${tag.color}`}>
+						<p
+							key={tag.name}
+							className='text-[14px]'
+							style={{ color: `${tag.color}` }}
+						>
 							#{tag.name}
 						</p>
 					))}
@@ -83,18 +88,6 @@ function Works() {
 				<p className={styles.sectionSubText}>My work</p>
 				<h2 className={styles.sectionHeadText}>Projects.</h2>
 			</motion.div>
-
-			<div className='w-full flex'>
-				<motion.p
-					variants={fadeIn('', '', 0.1, 1)}
-					className='mt-3 text-secondary text-[17px] max-w-3xl leadin g-[30px]'
-				>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-					nostrum, repudiandae pariatur quisquam deserunt sunt eos quas placeat
-					beatae aut eius sint officiis aliquam atque saepe minus. Rerum,
-					facilis perferendis.
-				</motion.p>
-			</div>
 
 			<div className='mt-20 flex justify-center flex-wrap gap-7'>
 				{projects.map((project, index) => (

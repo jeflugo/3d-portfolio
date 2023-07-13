@@ -1,15 +1,10 @@
-import { useState } from 'react'
-
 import { Link } from 'react-router-dom'
 
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { logo, menu, close } from '../assets'
 
-export default function Navbar() {
-	const [active, setActive] = useState('')
-	const [toggle, setToggle] = useState(false)
-
+export default function Navbar({ active, setActive, toggle, setToggle }) {
 	return (
 		<nav
 			className={`${styles.paddingX} w-full py-5 fixed top-0 z-20 bg-primary`}

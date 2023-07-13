@@ -10,13 +10,21 @@ import {
 	Hero,
 	Navbar,
 } from './components'
+import { useState } from 'react'
 
 export default function App() {
+	const [active, setActive] = useState('')
+	const [toggle, setToggle] = useState(false)
 	return (
 		<BrowserRouter>
 			<div className='relative z-0 bg-primary'>
 				<div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-					<Navbar />
+					<Navbar
+						active={active}
+						setActive={setActive}
+						toggle={toggle}
+						setToggle={setToggle}
+					/>
 					<Hero />
 				</div>
 				<About />
@@ -24,9 +32,9 @@ export default function App() {
 				<Works />
 				<div className='relative z-0'>
 					<Contact />
-					{/* <StarsCanvas /> */}
+					<StarsCanvas />
 				</div>
-				<NavigateBtn />
+				<NavigateBtn setActive={setActive} />
 			</div>
 		</BrowserRouter>
 	)

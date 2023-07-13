@@ -10,10 +10,12 @@ import {
 	reactjs,
 	redux,
 	tailwind,
+	bootstrap,
 	nodejs,
 	mongodb,
 	git,
 	figma,
+	threejs,
 	docker,
 	meta,
 	starbucks,
@@ -22,7 +24,12 @@ import {
 	carrent,
 	jobit,
 	tripguide,
-	threejs,
+	weightTracker,
+	todoList,
+	vowelCounter,
+	fakePortfolio,
+	calculator,
+	snakeGame,
 } from '../assets'
 
 export const navLinks = [
@@ -42,7 +49,7 @@ export const navLinks = [
 
 const services = [
 	{
-		title: 'Web Developer',
+		title: 'Frontend Developer',
 		icon: web,
 	},
 	// {
@@ -73,6 +80,10 @@ const technologies = [
 		icon: javascript,
 	},
 	{
+		name: 'TypeScript',
+		icon: typescript,
+	},
+	{
 		name: 'React JS',
 		icon: reactjs,
 	},
@@ -83,6 +94,10 @@ const technologies = [
 	{
 		name: 'Tailwind CSS',
 		icon: tailwind,
+	},
+	{
+		name: 'Bootstrap',
+		icon: bootstrap,
 	},
 	{
 		name: 'Node JS',
@@ -106,152 +121,218 @@ const technologies = [
 	},
 ]
 
-const experiences = [
-	{
-		title: 'React.js Developer',
-		company_name: 'Starbucks',
-		icon: starbucks,
-		iconBg: '#383E56',
-		date: 'March 2020 - April 2021',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-	{
-		title: 'React Native Developer',
-		company_name: 'Tesla',
-		icon: tesla,
-		iconBg: '#E6DEDD',
-		date: 'Jan 2021 - Feb 2022',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-	{
-		title: 'Web Developer',
-		company_name: 'Shopify',
-		icon: shopify,
-		iconBg: '#383E56',
-		date: 'Jan 2022 - Jan 2023',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-	{
-		title: 'Full stack Developer',
-		company_name: 'Meta',
-		icon: meta,
-		iconBg: '#E6DEDD',
-		date: 'Jan 2023 - Present',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-]
+// const experiences = [
+// 	{
+// 		title: 'React.js Developer',
+// 		company_name: 'Starbucks',
+// 		icon: starbucks,
+// 		iconBg: '#383E56',
+// 		date: 'March 2020 - April 2021',
+// 		points: [
+// 			'Developing and maintaining web applications using React.js and other related technologies.',
+// 			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+// 			'Implementing responsive design and ensuring cross-browser compatibility.',
+// 			'Participating in code reviews and providing constructive feedback to other developers.',
+// 		],
+// 	},
+// 	{
+// 		title: 'React Native Developer',
+// 		company_name: 'Tesla',
+// 		icon: tesla,
+// 		iconBg: '#E6DEDD',
+// 		date: 'Jan 2021 - Feb 2022',
+// 		points: [
+// 			'Developing and maintaining web applications using React.js and other related technologies.',
+// 			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+// 			'Implementing responsive design and ensuring cross-browser compatibility.',
+// 			'Participating in code reviews and providing constructive feedback to other developers.',
+// 		],
+// 	},
+// 	{
+// 		title: 'Web Developer',
+// 		company_name: 'Shopify',
+// 		icon: shopify,
+// 		iconBg: '#383E56',
+// 		date: 'Jan 2022 - Jan 2023',
+// 		points: [
+// 			'Developing and maintaining web applications using React.js and other related technologies.',
+// 			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+// 			'Implementing responsive design and ensuring cross-browser compatibility.',
+// 			'Participating in code reviews and providing constructive feedback to other developers.',
+// 		],
+// 	},
+// 	{
+// 		title: 'Full stack Developer',
+// 		company_name: 'Meta',
+// 		icon: meta,
+// 		iconBg: '#E6DEDD',
+// 		date: 'Jan 2023 - Present',
+// 		points: [
+// 			'Developing and maintaining web applications using React.js and other related technologies.',
+// 			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+// 			'Implementing responsive design and ensuring cross-browser compatibility.',
+// 			'Participating in code reviews and providing constructive feedback to other developers.',
+// 		],
+// 	},
+// ]
 
-const testimonials = [
-	{
-		testimonial:
-			'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-		name: 'Sara Lee',
-		designation: 'CFO',
-		company: 'Acme Co',
-		image: 'https://randomuser.me/api/portraits/women/4.jpg',
-	},
-	{
-		testimonial:
-			"I've never met a web developer who truly cares about their clients' success like Rick does.",
-		name: 'Chris Brown',
-		designation: 'COO',
-		company: 'DEF Corp',
-		image: 'https://randomuser.me/api/portraits/men/5.jpg',
-	},
-	{
-		testimonial:
-			"After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-		name: 'Lisa Wang',
-		designation: 'CTO',
-		company: '456 Enterprises',
-		image: 'https://randomuser.me/api/portraits/women/6.jpg',
-	},
-]
+// const testimonials = [
+// 	{
+// 		testimonial:
+// 			'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
+// 		name: 'Sara Lee',
+// 		designation: 'CFO',
+// 		company: 'Acme Co',
+// 		image: 'https://randomuser.me/api/portraits/women/4.jpg',
+// 	},
+// 	{
+// 		testimonial:
+// 			"I've never met a web developer who truly cares about their clients' success like Rick does.",
+// 		name: 'Chris Brown',
+// 		designation: 'COO',
+// 		company: 'DEF Corp',
+// 		image: 'https://randomuser.me/api/portraits/men/5.jpg',
+// 	},
+// 	{
+// 		testimonial:
+// 			"After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+// 		name: 'Lisa Wang',
+// 		designation: 'CTO',
+// 		company: '456 Enterprises',
+// 		image: 'https://randomuser.me/api/portraits/women/6.jpg',
+// 	},
+// ]
 
 const projects = [
 	{
-		name: 'Car Rent',
+		name: 'Weight tacker',
 		description:
-			'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+			'This app allows you to track your weight in time and shows you how much have you lost or gained.',
+		tags: [
+			{
+				name: 'html5',
+				color: 'orange',
+			},
+			{
+				name: 'css3',
+				color: 'aqua',
+			},
+			{
+				name: 'js',
+				color: 'yellow',
+			},
+		],
+		image: weightTracker,
+		page_link: 'https://porfolio-jeferson-weight-tracker.netlify.app',
+		source_code_link: 'https://github.com/jeflugo/weight-tracker',
+	},
+	{
+		name: 'Todo List',
+		description: 'Simple TODO list app with full CRUD functionality.',
 		tags: [
 			{
 				name: 'react',
-				color: 'blue-text-gradient',
+				color: 'aqua',
 			},
 			{
-				name: 'mongodb',
-				color: 'green-text-gradient',
+				name: 'typescript',
+				color: 'dodgerblue',
 			},
 			{
-				name: 'tailwind',
-				color: 'pink-text-gradient',
+				name: 'react-redux',
+				color: 'blueviolet',
+			},
+			{
+				name: 'bootstrap',
+				color: 'purple',
 			},
 		],
-		image: carrent,
-		source_code_link: 'https://github.com/',
+		image: todoList,
+		page_link: 'https://portfolio-jeferson-todo-app.netlify.app/',
+		source_code_link: 'https://github.com/jeflugo/todo-list-react-ts',
 	},
 	{
-		name: 'Job IT',
-		description:
-			'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+		name: 'Vowel counter',
+		description: 'App to count how many vowels there are in a certain text.',
 		tags: [
 			{
 				name: 'react',
-				color: 'blue-text-gradient',
+				color: 'aqua',
 			},
 			{
-				name: 'restapi',
-				color: 'green-text-gradient',
+				name: 'typescript',
+				color: 'dodgerblue',
 			},
 			{
-				name: 'scss',
-				color: 'pink-text-gradient',
+				name: 'bootstrap',
+				color: 'purple',
 			},
 		],
-		image: jobit,
-		source_code_link: 'https://github.com/',
+		image: vowelCounter,
+		page_link: 'https://portfolio-jeferson-vowels-counter.netlify.app/',
+		source_code_link: 'https://github.com/jeflugo/vowels-counter',
 	},
 	{
-		name: 'Trip Guide',
-		description:
-			'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+		name: 'Fake portfolio',
+		description: 'Simple web portfolio with html and css.',
 		tags: [
 			{
-				name: 'nextjs',
-				color: 'blue-text-gradient',
+				name: 'html5',
+				color: 'orange',
 			},
 			{
-				name: 'supabase',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'css',
-				color: 'pink-text-gradient',
+				name: 'css3',
+				color: 'aqua',
 			},
 		],
-		image: tripguide,
-		source_code_link: 'https://github.com/',
+		image: fakePortfolio,
+		page_link: 'https://portfolio-jeferson-fake-page.netlify.app/',
+		source_code_link: 'https://github.com/jeflugo/fake-page',
+	},
+	{
+		name: 'Calculator',
+		description:
+			'Simple calculator created with JavaScript with Theme switch button.',
+		tags: [
+			{
+				name: 'html5',
+				color: 'orange',
+			},
+			{
+				name: 'css3',
+				color: 'aqua',
+			},
+			{
+				name: 'js',
+				color: 'yellow',
+			},
+		],
+		image: calculator,
+		page_link: 'https://portfolio-jeferson-calculator.netlify.app/',
+		source_code_link: 'https://github.com/jeflugo/calculator-js',
+	},
+	{
+		name: 'Snake Game',
+		description:
+			'Become an anaconda and start eating some cows, simple and fun game created using JS.',
+		tags: [
+			{
+				name: 'html5',
+				color: 'orange',
+			},
+			{
+				name: 'css3',
+				color: 'aqua',
+			},
+			{
+				name: 'js',
+				color: 'yellow',
+			},
+		],
+		image: snakeGame,
+		page_link: 'https://portfolio-jeferson-anaconda-game.netlify.app/',
+		source_code_link: 'https://github.com/jeflugo/anaconda-game',
 	},
 ]
 
-export { services, technologies, experiences, testimonials, projects }
+export { services, technologies, projects }
