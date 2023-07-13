@@ -8,4 +8,4 @@
 
 **react, threejs, motionjs, tailwindcss**
 
-[Go to the page](hhttps://jeferson-lugo.netlify.app/ 'Personal portfolio')
+[Go to the page](https://jeferson-lugo.netlify.app/ 'Personal portfolio')
