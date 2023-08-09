@@ -31,6 +31,7 @@ import tesla from './company/tesla.png'
 import carrent from './carrent.png'
 import jobit from './jobit.png'
 import tripguide from './tripguide.png'
+import ecommerce from './ecommerce.png'
 import weightTracker from './weight-tracker.png'
 import todoList from './todo-list.png'
 import vowelCounter from './vowel-counter.png'
@@ -69,6 +70,7 @@ export {
 	carrent,
 	jobit,
 	tripguide,
+	ecommerce,
 	weightTracker,
 	todoList,
 	vowelCounter,

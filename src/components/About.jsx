@@ -42,10 +42,9 @@ function About() {
 				variants={fadeIn('', '', 0.1, 1)}
 				className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
 			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nostrum,
-				repudiandae pariatur quisquam deserunt sunt eos quas placeat beatae aut
-				eius sint officiis aliquam atque saepe minus. Rerum, facilis
-				perferendis.
+				Junior web developer with experience in both frontend and backend, with
+				knowledge in SQL (MySQL) and NoSQL (MongoDb) databases, i've also worked
+				with figma designing mockups for some of my practice projects.
 			</motion.p>
 
 			<div className='mt-20 flex justify-center flex-wrap gap-10'>

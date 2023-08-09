@@ -24,6 +24,7 @@ import {
 	carrent,
 	jobit,
 	tripguide,
+	ecommerce,
 	weightTracker,
 	todoList,
 	vowelCounter,
@@ -204,6 +205,31 @@ const technologies = [
 // ]
 
 const projects = [
+	{
+		name: 'Sanity-Stripe Ecommerce',
+		description: 'Ecommerce page with full payment funcionality.',
+		tags: [
+			{
+				name: 'react',
+				color: 'aqua',
+			},
+			{
+				name: 'sanity',
+				color: 'indianred',
+			},
+			{
+				name: 'express',
+				color: 'gray',
+			},
+			{
+				name: 'stripe',
+				color: 'lightseagreen',
+			},
+		],
+		image: ecommerce,
+		page_link: 'https://sanity-stripe-ecommerce-seven.vercel.app/',
+		source_code_link: 'https://github.com/jeflugo/sanity-stripe-ecommerce',
+	},
 	{
 		name: 'Weight tacker',
 		description:
