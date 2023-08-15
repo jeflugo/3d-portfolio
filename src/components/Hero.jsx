@@ -17,6 +17,7 @@ export default function Hero() {
 					<h1 className={`${styles.heroHeadText}`}>
 						Hi, my name is <span className='text-[#915eff]'>Jeferson</span>
 					</h1>
+
 					<p className={`${styles.heroSubText} mt-2 text-white-100`}>
 						I create nice and modern apps and websites
 						<br className='sm:block hidden' /> with cutting edge UI
